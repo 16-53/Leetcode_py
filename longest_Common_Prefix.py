@@ -1,11 +1,14 @@
 class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
         len_strs = len(strs)
+        
         if len_strs == 1:
             return strs[0]
+        
         strs.sort(key = lambda s: len(s))
         first_word = strs[0]
         repeats = []
+        
         for i in range(1, len_strs):
             s = ''
             n = 0
@@ -17,8 +20,4 @@ class Solution:
                 n += 1
             repeats.append(s)
         repeats.sort(key = lambda s: len(s))
-
         return repeats[0]
-
-s = Solution()
-print(s.longestCommonPrefix(['']))
