@@ -6,5 +6,3 @@ class Solution:
             now = max(nums[i], now + nums[i])
             maxnum = max(now, maxnum)
         return maxnum
-s = Solution()
-print(s.maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))
