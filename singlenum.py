@@ -8,4 +8,4 @@ class Solution:
                 dictionary[nums[i]] = 1
         for i in dictionary.keys():
             if dictionary[i] == 1:
-                print(i)
+                return i
